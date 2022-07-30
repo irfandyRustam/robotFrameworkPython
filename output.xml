@@ -1,94 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 18:21:38.073" rpa="false" schemaversion="3">
-<suite id="s1" name="Alerts" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\alerts.robot">
-<test id="s1-t1" name="HandlingAlerts" line="7">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 19:45:05.906" rpa="false" schemaversion="3">
+<suite id="s1" name="Frames" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\frames.robot">
+<test id="s1-t1" name="Testing Frames" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://testautomationpractice.blogspot.com/</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220730 18:21:38.458" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20220730 18:21:38.457" endtime="20220730 18:21:45.025"/>
+<msg timestamp="20220730 19:45:06.533" level="INFO">Opening browser 'chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html'.</msg>
+<status status="PASS" starttime="20220730 19:45:06.532" endtime="20220730 19:45:09.788"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://button[normalize-space()='Click Me']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220730 18:21:45.030" level="INFO">Clicking element 'xpath://button[normalize-space()='Click Me']'.</msg>
-<status status="PASS" starttime="20220730 18:21:45.029" endtime="20220730 18:21:45.098"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 19:45:09.790" endtime="20220730 19:45:09.971"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>packageListFrame</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220730 19:45:09.973" level="INFO">Selecting frame 'packageListFrame'.</msg>
+<status status="PASS" starttime="20220730 19:45:09.972" endtime="20220730 19:45:10.136"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>org.openqa.selenium</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220730 19:45:10.137" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
+<status status="PASS" starttime="20220730 19:45:10.137" endtime="20220730 19:45:10.241"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220730 19:45:10.243" endtime="20220730 19:45:10.248"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220730 18:21:47.103" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220730 18:21:45.099" endtime="20220730 18:21:47.103"/>
+<msg timestamp="20220730 19:45:12.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220730 19:45:10.249" endtime="20220730 19:45:12.254"/>
 </kw>
-<kw name="Alert Should Not Be Present" library="SeleniumLibrary">
-<arg>Press a button!</arg>
-<doc>Verifies that no alert is present.</doc>
-<msg timestamp="20220730 18:21:47.120" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
-Message: unexpected alert open: {Alert text : Press a button!}
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00C16463+2188387]
-	Ordinal0 [0x00BAE461+1762401]
-	Ordinal0 [0x00AC3D78+802168]
-	Ordinal0 [0x00B1CA92+1165970]
-	Ordinal0 [0x00B0C5F6+1099254]
-	Ordinal0 [0x00AE6BE0+945120]
-	Ordinal0 [0x00AE7AD6+948950]
-	GetHandleVerifier [0x00EB71F2+2712546]
-	GetHandleVerifier [0x00EA886D+2652765]
-	GetHandleVerifier [0x00CA002A+520730]
-	GetHandleVerifier [0x00C9EE06+516086]
-	Ordinal0 [0x00BB468B+1787531]
-	Ordinal0 [0x00BB8E88+1805960]
-	Ordinal0 [0x00BB8F75+1806197]
-	Ordinal0 [0x00BC1DF1+1842673]
-	BaseThreadInitThunk [0x7683FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x773A7A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x773A7A6E+238]
-</msg>
-<msg timestamp="20220730 18:21:47.145" level="FAIL">ValueError: Invalid alert action 'PRESS A BUTTON!'.</msg>
-<status status="FAIL" starttime="20220730 18:21:47.104" endtime="20220730 18:21:47.170"/>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>packageFrame</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220730 19:45:12.256" level="INFO">Selecting frame 'packageFrame'.</msg>
+<status status="PASS" starttime="20220730 19:45:12.255" endtime="20220730 19:45:12.321"/>
 </kw>
-<status status="FAIL" starttime="20220730 18:21:38.456" endtime="20220730 18:21:47.171">ValueError: Invalid alert action 'PRESS A BUTTON!'.</status>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>WebDriver</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220730 19:45:12.322" level="INFO">Clicking link 'WebDriver'.</msg>
+<status status="PASS" starttime="20220730 19:45:12.321" endtime="20220730 19:45:12.458"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220730 19:45:12.460" endtime="20220730 19:45:12.472"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220730 19:45:14.486" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220730 19:45:12.475" endtime="20220730 19:45:14.486"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>classFrame</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220730 19:45:14.487" level="INFO">Selecting frame 'classFrame'.</msg>
+<status status="PASS" starttime="20220730 19:45:14.487" endtime="20220730 19:45:14.526"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Index</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220730 19:45:14.527" level="INFO">Clicking link 'Index'.</msg>
+<status status="PASS" starttime="20220730 19:45:14.526" endtime="20220730 19:45:16.105"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220730 19:45:16.106" endtime="20220730 19:45:16.144"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220730 19:45:18.148" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220730 19:45:16.145" endtime="20220730 19:45:18.148"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220730 19:45:18.149" endtime="20220730 19:45:20.404"/>
+</kw>
+<status status="PASS" starttime="20220730 19:45:06.530" endtime="20220730 19:45:20.406"/>
 </test>
-<status status="FAIL" starttime="20220730 18:21:38.076" endtime="20220730 18:21:47.174"/>
+<status status="PASS" starttime="20220730 19:45:05.909" endtime="20220730 19:45:20.410"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Alerts">Alerts</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Frames">Frames</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220730 18:21:47.120" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
-Message: unexpected alert open: {Alert text : Press a button!}
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00C16463+2188387]
-	Ordinal0 [0x00BAE461+1762401]
-	Ordinal0 [0x00AC3D78+802168]
-	Ordinal0 [0x00B1CA92+1165970]
-	Ordinal0 [0x00B0C5F6+1099254]
-	Ordinal0 [0x00AE6BE0+945120]
-	Ordinal0 [0x00AE7AD6+948950]
-	GetHandleVerifier [0x00EB71F2+2712546]
-	GetHandleVerifier [0x00EA886D+2652765]
-	GetHandleVerifier [0x00CA002A+520730]
-	GetHandleVerifier [0x00C9EE06+516086]
-	Ordinal0 [0x00BB468B+1787531]
-	Ordinal0 [0x00BB8E88+1805960]
-	Ordinal0 [0x00BB8F75+1806197]
-	Ordinal0 [0x00BC1DF1+1842673]
-	BaseThreadInitThunk [0x7683FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x773A7A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x773A7A6E+238]
-</msg>
 </errors>
 </robot>
