@@ -1,84 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 17:35:59.862" rpa="false" schemaversion="3">
-<suite id="s1" name="timeOutTests" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\timeOutTests.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 17:48:14.891" rpa="false" schemaversion="3">
+<suite id="s1" name="implicitWaitTests" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\implicitWaitTests.robot">
 <test id="s1-t1" name="RegTest" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220730 17:36:00.213" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/register'.</msg>
-<status status="PASS" starttime="20220730 17:36:00.212" endtime="20220730 17:36:03.930"/>
+<msg timestamp="20220730 17:48:15.432" level="INFO">Opening browser 'chrome' to base url 'http://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20220730 17:48:15.431" endtime="20220730 17:48:19.062"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220730 17:36:03.930" endtime="20220730 17:36:04.064"/>
+<status status="PASS" starttime="20220730 17:48:19.063" endtime="20220730 17:48:19.197"/>
 </kw>
-<kw name="Get Selenium Timeout" library="SeleniumLibrary">
-<var>${time}</var>
-<doc>Gets the timeout that is used by various keywords.</doc>
-<msg timestamp="20220730 17:36:04.065" level="INFO">${time} = 5 seconds</msg>
-<status status="PASS" starttime="20220730 17:36:04.065" endtime="20220730 17:36:04.065"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${implicitTime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20220730 17:48:19.198" level="INFO">${implicitTime} = 0 seconds</msg>
+<status status="PASS" starttime="20220730 17:48:19.198" endtime="20220730 17:48:19.198"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${time}</arg>
+<arg>${implicitTime}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 17:36:04.065" endtime="20220730 17:36:04.066"/>
+<status status="PASS" starttime="20220730 17:48:19.199" endtime="20220730 17:48:19.199"/>
 </kw>
-<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>10 seconds</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20220730 17:36:04.066" endtime="20220730 17:36:04.067"/>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220730 17:48:19.199" endtime="20220730 17:48:19.200"/>
 </kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Registration</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<msg timestamp="20220730 17:36:14.318" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220730 17:36:14.318" level="FAIL">Text 'Registration' did not appear in 10 seconds.</msg>
-<status status="FAIL" starttime="20220730 17:36:04.068" endtime="20220730 17:36:14.320"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${implicitTime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20220730 17:48:19.201" level="INFO">${implicitTime} = 10 seconds</msg>
+<status status="PASS" starttime="20220730 17:48:19.201" endtime="20220730 17:48:19.201"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${implicitTime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220730 17:48:19.201" endtime="20220730 17:48:19.202"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>Gender</arg>
 <arg>M</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.321" endtime="20220730 17:36:14.321"/>
+<msg timestamp="20220730 17:48:19.202" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20220730 17:48:19.202" endtime="20220730 17:48:19.330"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name:FirstName</arg>
+<arg>name:FirstName1</arg>
 <arg>David</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.322" endtime="20220730 17:36:14.322"/>
+<msg timestamp="20220730 17:48:19.332" level="INFO">Typing text 'David' into text field 'name:FirstName1'.</msg>
+<msg timestamp="20220730 17:48:29.593" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220730 17:48:29.594" level="FAIL">Element with locator 'name:FirstName1' not found.</msg>
+<status status="FAIL" starttime="20220730 17:48:19.331" endtime="20220730 17:48:29.596"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:LastName</arg>
 <arg>John</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.323" endtime="20220730 17:36:14.323"/>
+<status status="NOT RUN" starttime="20220730 17:48:29.597" endtime="20220730 17:48:29.597"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Email</arg>
 <arg>davidJohn123@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.324" endtime="20220730 17:36:14.324"/>
+<status status="NOT RUN" starttime="20220730 17:48:29.598" endtime="20220730 17:48:29.598"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:Password</arg>
 <arg>davidjohn</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.325" endtime="20220730 17:36:14.325"/>
+<status status="NOT RUN" starttime="20220730 17:48:29.600" endtime="20220730 17:48:29.600"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:ConfirmPassword</arg>
 <arg>davidjohn</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.325" endtime="20220730 17:36:14.325"/>
+<status status="NOT RUN" starttime="20220730 17:48:29.601" endtime="20220730 17:48:29.601"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20220730 17:36:14.325" endtime="20220730 17:36:14.325"/>
+<status status="NOT RUN" starttime="20220730 17:48:29.602" endtime="20220730 17:48:29.602"/>
 </kw>
-<status status="FAIL" starttime="20220730 17:36:00.212" endtime="20220730 17:36:14.326">Text 'Registration' did not appear in 10 seconds.</status>
+<status status="FAIL" starttime="20220730 17:48:15.429" endtime="20220730 17:48:29.603">Element with locator 'name:FirstName1' not found.</status>
 </test>
-<status status="FAIL" starttime="20220730 17:35:59.865" endtime="20220730 17:36:14.329"/>
+<status status="FAIL" starttime="20220730 17:48:14.894" endtime="20220730 17:48:29.606"/>
 </suite>
 <statistics>
 <total>
@@ -87,7 +95,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="timeOutTests">timeOutTests</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="implicitWaitTests">implicitWaitTests</stat>
 </suite>
 </statistics>
 <errors>
