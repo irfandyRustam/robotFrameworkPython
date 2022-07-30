@@ -1,61 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220729 20:17:40.714" rpa="false" schemaversion="3">
-<suite id="s1" name="radioButtons" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\radioButtons.robot">
-<test id="s1-t1" name="TestingInputBox" line="9">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 16:03:38.803" rpa="false" schemaversion="3">
+<suite id="s1" name="dropDowns" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\dropDowns.robot">
+<test id="s1-t1" name="Handling DropDowns and Lists" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220729 20:17:41.027" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
-<status status="PASS" starttime="20220729 20:17:41.027" endtime="20220729 20:17:44.708"/>
+<msg timestamp="20220730 16:03:39.117" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20220730 16:03:39.117" endtime="20220730 16:03:42.996"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220729 20:17:44.709" endtime="20220729 20:17:44.828"/>
+<status status="PASS" starttime="20220730 16:03:42.997" endtime="20220730 16:03:43.126"/>
 </kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>1 second</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220729 20:17:44.828" endtime="20220729 20:17:44.828"/>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>xpath://select[@class='custom-select']</arg>
+<arg>Denmark</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220730 16:03:43.127" level="INFO">Selecting options from selection list 'xpath://select[@class='custom-select']' by label Denmark.</msg>
+<status status="PASS" starttime="20220730 16:03:43.127" endtime="20220730 16:03:43.241"/>
 </kw>
-<kw name="Select Radio Button" library="SeleniumLibrary">
-<arg>optionsRadios</arg>
-<arg>female</arg>
-<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20220729 20:17:44.828" level="INFO">Selecting 'female' from radio button 'optionsRadios'.</msg>
-<status status="PASS" starttime="20220729 20:17:44.828" endtime="20220729 20:17:47.986"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220730 16:03:45.244" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220730 16:03:43.242" endtime="20220730 16:03:45.244"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://input[@id='3years']/following-sibling::label</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220729 20:17:47.986" level="INFO">Clicking element 'xpath://input[@id='3years']/following-sibling::label'.</msg>
-<status status="PASS" starttime="20220729 20:17:47.986" endtime="20220729 20:17:50.063"/>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>xpath://select[@class='custom-select']</arg>
+<arg>6</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220730 16:03:45.245" level="INFO">Selecting options from selection list 'xpath://select[@class='custom-select']' by index 6.</msg>
+<status status="PASS" starttime="20220730 16:03:45.245" endtime="20220730 16:03:45.418"/>
 </kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>id:monday</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220729 20:17:50.063" level="INFO">Selecting checkbox 'id:monday'.</msg>
-<status status="PASS" starttime="20220729 20:17:50.063" endtime="20220729 20:17:55.235"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220730 16:03:47.425" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220730 16:03:45.418" endtime="20220730 16:03:47.425"/>
 </kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>id:tuesday</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220729 20:17:55.235" level="INFO">Selecting checkbox 'id:tuesday'.</msg>
-<status status="PASS" starttime="20220729 20:17:55.235" endtime="20220729 20:18:00.412"/>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath://select[@class='custom-select']</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220730 16:03:47.426" level="INFO">Selecting options from selection list 'xpath://select[@class='custom-select']' by value 3.</msg>
+<status status="PASS" starttime="20220730 16:03:47.425" endtime="20220730 16:03:47.504"/>
 </kw>
-<kw name="Unselect Checkbox" library="SeleniumLibrary">
-<arg>id:monday</arg>
-<doc>Removes the selection of checkbox identified by ``locator``.</doc>
-<msg timestamp="20220729 20:18:00.412" level="INFO">Unselecting checkbox 'id:monday'.</msg>
-<status status="PASS" starttime="20220729 20:18:00.412" endtime="20220729 20:18:05.567"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220729 20:18:05.567" endtime="20220729 20:18:08.734"/>
-</kw>
-<status status="PASS" starttime="20220729 20:17:41.027" endtime="20220729 20:18:08.734"/>
+<status status="PASS" starttime="20220730 16:03:39.116" endtime="20220730 16:03:47.506"/>
 </test>
-<status status="PASS" starttime="20220729 20:17:40.714" endtime="20220729 20:18:08.734"/>
+<status status="PASS" starttime="20220730 16:03:38.805" endtime="20220730 16:03:47.508"/>
 </suite>
 <statistics>
 <total>
@@ -64,7 +57,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="radioButtons">radioButtons</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="dropDowns">dropDowns</stat>
 </suite>
 </statistics>
 <errors>
