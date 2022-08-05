@@ -1,76 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 20:14:02.782" rpa="false" schemaversion="3">
-<suite id="s1" name="navigationalKeywords" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\navigationalKeywords.robot">
-<test id="s1-t1" name="NavigationTest" line="7">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220805 11:48:09.895" rpa="false" schemaversion="3">
+<suite id="s1" name="captureScreenshot" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\captureScreenshot.robot">
+<test id="s1-t1" name="HandlingAlerts" line="7">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.google.com/</arg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220730 20:14:03.412" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20220730 20:14:03.412" endtime="20220730 20:14:06.838"/>
+<msg timestamp="20220805 11:48:10.402" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220805 11:48:10.402" endtime="20220805 11:48:17.183"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:06.847" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20220730 20:14:06.839" endtime="20220730 20:14:06.847"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220805 11:48:17.184" endtime="20220805 11:48:17.324"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:06.848" endtime="20220730 20:14:06.849"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txtUsername</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220805 11:48:17.325" level="INFO">Typing text 'Admin' into text field 'id:txtUsername'.</msg>
+<status status="PASS" starttime="20220805 11:48:17.324" endtime="20220805 11:48:17.491"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220730 20:14:08.854" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220730 20:14:06.849" endtime="20220730 20:14:08.855"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txtPassword</arg>
+<arg>admin123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220805 11:48:17.492" level="INFO">Typing text 'admin123' into text field 'id:txtPassword'.</msg>
+<status status="PASS" starttime="20220805 11:48:17.491" endtime="20220805 11:48:17.592"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://www.bing.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220730 20:14:08.858" level="INFO">Opening url 'https://www.bing.com/'</msg>
-<status status="PASS" starttime="20220730 20:14:08.858" endtime="20220730 20:14:09.175"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://div[@id='divLogo']//img</arg>
+<arg>logo.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20220805 11:48:17.726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="logo.png"&gt;&lt;img src="logo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220805 11:48:17.593" endtime="20220805 11:48:17.726"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:09.192" level="INFO">${loc} = https://www.bing.com/</msg>
-<status status="PASS" starttime="20220730 20:14:09.177" endtime="20220730 20:14:09.193"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>loginTC.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220805 11:48:17.921" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="loginTC.png"&gt;&lt;img src="loginTC.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220805 11:48:17.727" endtime="20220805 11:48:17.921"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:09.194" endtime="20220730 20:14:09.195"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220730 20:14:11.209" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220730 20:14:09.195" endtime="20220730 20:14:11.209"/>
-</kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20220730 20:14:11.210" endtime="20220730 20:14:11.277"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:11.289" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20220730 20:14:11.277" endtime="20220730 20:14:11.289"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:11.290" endtime="20220730 20:14:11.290"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220730 20:14:11.291" endtime="20220730 20:14:13.537"/>
-</kw>
-<status status="PASS" starttime="20220730 20:14:03.411" endtime="20220730 20:14:13.539"/>
+<status status="PASS" starttime="20220805 11:48:10.401" endtime="20220805 11:48:17.921"/>
 </test>
-<status status="PASS" starttime="20220730 20:14:02.785" endtime="20220730 20:14:13.544"/>
+<status status="PASS" starttime="20220805 11:48:09.898" endtime="20220805 11:48:17.923"/>
 </suite>
 <statistics>
 <total>
@@ -79,7 +51,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="navigationalKeywords">navigationalKeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="captureScreenshot">captureScreenshot</stat>
 </suite>
 </statistics>
 <errors>
