@@ -1,76 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220730 20:14:02.782" rpa="false" schemaversion="3">
-<suite id="s1" name="navigationalKeywords" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\navigationalKeywords.robot">
-<test id="s1-t1" name="NavigationTest" line="7">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220805 21:19:34.830" rpa="false" schemaversion="3">
+<suite id="s1" name="tableDemo" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\tableDemo.robot">
+<test id="s1-t1" name="TableValidations" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.google.com/</arg>
-<arg>chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220730 20:14:03.412" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
-<status status="PASS" starttime="20220730 20:14:03.412" endtime="20220730 20:14:06.838"/>
+<msg timestamp="20220805 21:19:35.414" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220805 21:19:35.413" endtime="20220805 21:19:42.178"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:06.847" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20220730 20:14:06.839" endtime="20220730 20:14:06.847"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220805 21:19:42.179" endtime="20220805 21:19:42.307"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${rows}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220805 21:19:42.324" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20220805 21:19:42.307" endtime="20220805 21:19:42.324"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${cols}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[1]/th</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220805 21:19:42.343" level="INFO">${cols} = 4</msg>
+<status status="PASS" starttime="20220805 21:19:42.325" endtime="20220805 21:19:42.343"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
+<arg>${rows}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:06.848" endtime="20220730 20:14:06.849"/>
+<status status="PASS" starttime="20220805 21:19:42.343" endtime="20220805 21:19:42.344"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${cols}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220805 21:19:42.344" endtime="20220805 21:19:42.344"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${data}</var>
+<arg>xpath://table[@name='BookTable']/tbody/tr[5]/td[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220805 21:19:42.379" level="INFO">${data} = Master In Selenium</msg>
+<status status="PASS" starttime="20220805 21:19:42.345" endtime="20220805 21:19:42.379"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220805 21:19:42.379" endtime="20220805 21:19:42.380"/>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
 <arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220730 20:14:08.854" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220730 20:14:06.849" endtime="20220730 20:14:08.855"/>
+<arg>Author</arg>
+<doc>Verifies table column contains text ``expected``.</doc>
+<status status="PASS" starttime="20220805 21:19:42.380" endtime="20220805 21:19:42.438"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://www.bing.com/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220730 20:14:08.858" level="INFO">Opening url 'https://www.bing.com/'</msg>
-<status status="PASS" starttime="20220730 20:14:08.858" endtime="20220730 20:14:09.175"/>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>4</arg>
+<arg>Learn JS</arg>
+<doc>Verifies that table row contains text ``expected``.</doc>
+<status status="PASS" starttime="20220805 21:19:42.438" endtime="20220805 21:19:42.483"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:09.192" level="INFO">${loc} = https://www.bing.com/</msg>
-<status status="PASS" starttime="20220730 20:14:09.177" endtime="20220730 20:14:09.193"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:09.194" endtime="20220730 20:14:09.195"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>5</arg>
 <arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220730 20:14:11.209" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220730 20:14:09.195" endtime="20220730 20:14:11.209"/>
+<arg>Mukesh</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220805 21:19:42.543" level="INFO">Table cell contains 'Mukesh'.</msg>
+<status status="PASS" starttime="20220805 21:19:42.484" endtime="20220805 21:19:42.543"/>
 </kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20220730 20:14:11.210" endtime="20220730 20:14:11.277"/>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<arg>xpath://table[@name='BookTable']</arg>
+<arg>BookName</arg>
+<doc>Verifies table header contains text ``expected``.</doc>
+<status status="PASS" starttime="20220805 21:19:42.544" endtime="20220805 21:19:42.583"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${loc}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20220730 20:14:11.289" level="INFO">${loc} = https://www.google.com/</msg>
-<status status="PASS" starttime="20220730 20:14:11.277" endtime="20220730 20:14:11.289"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${loc}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220730 20:14:11.290" endtime="20220730 20:14:11.290"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220730 20:14:11.291" endtime="20220730 20:14:13.537"/>
-</kw>
-<status status="PASS" starttime="20220730 20:14:03.411" endtime="20220730 20:14:13.539"/>
+<status status="PASS" starttime="20220805 21:19:35.412" endtime="20220805 21:19:42.583"/>
 </test>
-<status status="PASS" starttime="20220730 20:14:02.785" endtime="20220730 20:14:13.544"/>
+<status status="PASS" starttime="20220805 21:19:34.833" endtime="20220805 21:19:42.585"/>
 </suite>
 <statistics>
 <total>
@@ -79,7 +89,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="navigationalKeywords">navigationalKeywords</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="tableDemo">tableDemo</stat>
 </suite>
 </statistics>
 <errors>
