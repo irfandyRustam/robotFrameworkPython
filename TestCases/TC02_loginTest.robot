@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Resources/LoginKeywords.robot
 
 *** Variables ***
-${browser}  chrome
+${browser}  headlessfirefox
 ${url}      https://demo.nopcommerce.com/login
 ${user}     ${EMAIL}  # global variable from TC01_registrationTest.robot
 ${pwd}      password123

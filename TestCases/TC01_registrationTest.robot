@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Resources/RegistrationKeywords.robot
 
 *** Variables ***
-${browser}  chrome
+${browser}  headlesschrome
 ${url}      https://demo.nopcommerce.com/login
 
 *** Test Cases ***

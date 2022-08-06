@@ -10,6 +10,7 @@ Open MyBrowser
     maximize browser window
 
 Click Register Link
+    wait until page contains    Register
     click link    ${link_register}
 
 Enter Firstname
