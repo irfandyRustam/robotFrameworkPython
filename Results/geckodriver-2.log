@@ -1,0 +1,17 @@
+1659786646636	geckodriver	INFO	Listening on 127.0.0.1:63616
+1659786649958	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "63617" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\IRFAND~1\\AppData\\Local\\Temp\\rust_mozprofile2XLmKa"
+*** You are running in headless mode.
+1659786651092	Marionette	INFO	Marionette enabled
+1659786651107	Marionette	INFO	Listening on port 63630
+WebDriver BiDi listening on ws://localhost:63617
+Read port: 63630
+1659786651324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\IRFAND~1\\AppData\\Local\\Temp\\rust_mozprofile2XLmKa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63617/devtools/browser/87a50375-ea59-4445-81a0-1c2700b6dadd
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.nopcommerce.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1659786655680	Marionette	INFO	Stopped listening on port 63630

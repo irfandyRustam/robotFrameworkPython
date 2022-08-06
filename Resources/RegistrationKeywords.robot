@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library  String
 Variables   ../PageObjects/Locators.py
 
 *** Keywords ***
@@ -9,6 +10,7 @@ Open MyBrowser
     maximize browser window
 
 Click Register Link
+    wait until page contains    Register
     click link    ${link_register}
 
 Enter Firstname
@@ -61,3 +63,10 @@ Verify Successful Registration
 
 Close MyBrowsers
     close all browsers
+
+Generate Random Email
+    ${random}   Generate Random String  8  [LETTERS]
+    ${domain}   set variable    @abcmail.com
+    ${email}    set variable    ${random}${domain}
+    log to console    ${email}
+    [Return]    ${email}

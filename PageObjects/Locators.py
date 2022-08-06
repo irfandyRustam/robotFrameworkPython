@@ -7,7 +7,7 @@ btn_Login = "xpath://button[normalize-space()='Log in']"
 # customer12345
 
 # Registration Page Elements
-link_register = "link:Register"
+link_register = "xpath://a[normalize-space()='Register']"
 rdBtn_male = "id:gender-male"
 rdBtn_female = "id:gender-female"
 txt_firstName = "name:FirstName"
