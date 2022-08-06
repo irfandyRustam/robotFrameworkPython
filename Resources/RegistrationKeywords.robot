@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library  String
 Variables   ../PageObjects/Locators.py
 
 *** Keywords ***
@@ -61,3 +62,10 @@ Verify Successful Registration
 
 Close MyBrowsers
     close all browsers
+
+Generate Random Email
+    ${random}   Generate Random String  8  [LETTERS]
+    ${domain}   set variable    @abcmail.com
+    ${email}    set variable    ${random}${domain}
+    log to console    ${email}
+    [Return]    ${email}

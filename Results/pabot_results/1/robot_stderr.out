@@ -1,0 +1,2 @@
+[ ERROR ] Error in file 'C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\TC02_loginTest.robot' on line 8: Setting variable '${user}' failed: Variable '${EMAIL}' not found. Did you mean:
+    ${txt_email}

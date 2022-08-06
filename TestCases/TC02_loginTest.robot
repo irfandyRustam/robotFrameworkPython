@@ -5,8 +5,8 @@ Resource    ../Resources/LoginKeywords.robot
 *** Variables ***
 ${browser}  chrome
 ${url}      https://demo.nopcommerce.com/login
-${user}     johndoe12345@nopCommerce.com
-${pwd}      customer12345
+${user}     ${EMAIL}  # global variable from TC01_registrationTest.robot
+${pwd}      password123
 
 *** Test Cases ***
 LoginTest

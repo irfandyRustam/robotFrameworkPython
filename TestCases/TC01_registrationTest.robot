@@ -8,11 +8,15 @@ ${url}      https://demo.nopcommerce.com/login
 
 *** Test Cases ***
 RegistrationTest
+    # Generate Random Email
+    ${EMAIL}=   Generate Random Email
+    set global variable    ${EMAIL}
+
     Open MyBrowser    ${url}    ${browser}
     Click Register Link
     Enter Firstname     Satoru
     Enter Lastname      Gojo
-    Enter Email         gojoSatoru@jkjk.com
+    Enter Email         ${EMAIL}
     Select Gender Male
     Select Day          7
     Select Month        December
