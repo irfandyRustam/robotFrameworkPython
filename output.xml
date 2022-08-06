@@ -1,98 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 10:29:43.528" rpa="false" schemaversion="3">
-<suite id="s1" name="setupAndTearDown" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\setupAndTearDown.robot">
-<kw name="Log To Console" library="BuiltIn" type="SETUP">
-<arg>Opening Browser</arg>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220806 10:42:54.628" rpa="false" schemaversion="3">
+<suite id="s1" name="Tagging" source="C:\Users\irfandy4hmad\PycharmProjects\robotFrameworkPython\TestCases\tagging.robot">
+<test id="s1-t1" name="TC1 User RegistrationTest" line="5">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is user reg test</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.116" endtime="20220806 10:29:44.116"/>
-</kw>
-<test id="s1-t1" name="TC1 Prepaid Recharge" line="11">
-<kw name="Log To Console" library="BuiltIn" type="SETUP">
-<arg>Login to application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.118" endtime="20220806 10:29:44.118"/>
+<status status="PASS" starttime="20220806 10:42:54.665" endtime="20220806 10:42:54.665"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>This is prepaid recharge testcase</arg>
+<arg>user registration test is over</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.118" endtime="20220806 10:29:44.119"/>
+<status status="PASS" starttime="20220806 10:42:54.666" endtime="20220806 10:42:54.666"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
-<arg>Logout from application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.119" endtime="20220806 10:29:44.119"/>
-</kw>
-<status status="PASS" starttime="20220806 10:29:44.117" endtime="20220806 10:29:44.119"/>
+<tag>regression</tag>
+<status status="PASS" starttime="20220806 10:42:54.664" endtime="20220806 10:42:54.667"/>
 </test>
-<test id="s1-t2" name="TC2 Postpaid Recharge" line="14">
-<kw name="Log To Console" library="BuiltIn" type="SETUP">
-<arg>Login to application</arg>
+<test id="s1-t2" name="TC3 Change user settings" line="15">
+<kw name="Log To Console" library="BuiltIn">
+<arg>This is changing user settings test</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.121" endtime="20220806 10:29:44.122"/>
+<status status="PASS" starttime="20220806 10:42:54.669" endtime="20220806 10:42:54.669"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>This is postpaid recharge testcase</arg>
+<arg>Change user settings</arg>
+<arg>test is over</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.122" endtime="20220806 10:29:44.123"/>
+<status status="PASS" starttime="20220806 10:42:54.670" endtime="20220806 10:42:54.670"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
-<arg>Logout from application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.124" endtime="20220806 10:29:44.125"/>
-</kw>
-<status status="PASS" starttime="20220806 10:29:44.121" endtime="20220806 10:29:44.125"/>
+<tag>regression</tag>
+<status status="PASS" starttime="20220806 10:42:54.668" endtime="20220806 10:42:54.670"/>
 </test>
-<test id="s1-t3" name="TC3 Search" line="17">
-<kw name="Log To Console" library="BuiltIn" type="SETUP">
-<arg>Login to application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.128" endtime="20220806 10:29:44.128"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is Search testcase</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.129" endtime="20220806 10:29:44.129"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
-<arg>Logout from application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.130" endtime="20220806 10:29:44.130"/>
-</kw>
-<status status="PASS" starttime="20220806 10:29:44.127" endtime="20220806 10:29:44.130"/>
-</test>
-<test id="s1-t4" name="TC4 Advanced Search" line="20">
-<kw name="Log To Console" library="BuiltIn" type="SETUP">
-<arg>Login to application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.132" endtime="20220806 10:29:44.132"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>This is Advanced Search testcase</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.132" endtime="20220806 10:29:44.133"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
-<arg>Logout from application</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.133" endtime="20220806 10:29:44.133"/>
-</kw>
-<status status="PASS" starttime="20220806 10:29:44.131" endtime="20220806 10:29:44.134"/>
-</test>
-<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
-<arg>Closing Browser</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220806 10:29:44.135" endtime="20220806 10:29:44.135"/>
-</kw>
-<status status="PASS" starttime="20220806 10:29:43.531" endtime="20220806 10:29:44.135"/>
+<status status="PASS" starttime="20220806 10:42:54.631" endtime="20220806 10:42:54.672"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">regression</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="setupAndTearDown">setupAndTearDown</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tagging">Tagging</stat>
 </suite>
 </statistics>
 <errors>
